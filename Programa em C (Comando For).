@@ -1,0 +1,47 @@
+\\Nesse código mostra como funciona o comando for. O seu objetivo é o usuário colocar a média de cada aluno da turma e no final é apresentado a média da geral, 
+a maior nota e a menor.\\
+
+#include "stdio.h"
+#include "stdlib.h"
+int main()
+
+{
+float mg, m[3], acc;
+int qac, qab, i;
+
+acc=0;
+qab=0;
+qac=0;
+
+    if (i==1)
+    {
+        qac=m[i];
+        qab=m[i];
+    }
+    for (i=0; i<=2; i++)
+        {
+        printf("Digite a média: ");
+        scanf ("%f", &m[i]);
+
+        acc = acc + m[i];
+        }
+        mg = acc/3;
+
+    for (i = 0; i<=2; i++)
+        {
+            if (mg<m[i])
+            {
+            qab++;
+            }
+            if (mg>m[i])
+            {
+            qac++;
+            }
+        }
+
+        printf("A média geral e: %.2f\n", mg);
+        printf("A quantidade de alunos acima da média e de: %.2f\n", qac);
+        printf("A quantidade de alunos abaixo da média e de: %.2f\n", qab);
+
+    return 0;
+}
